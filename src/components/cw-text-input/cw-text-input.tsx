@@ -91,7 +91,7 @@ export class CwTextInput implements ICwInputElement {
       value: this.value
     };
 
-    const cssInputClasses = `cw-text-input__field cw-text-input__field--${ this.color }`;
+    const cssInputClasses = `cw-text-input__field`;
     const cssMainClasses = `cw-text-input ${ this.error ? 'cw-text-input--error' : '' }`;
 
     return <div class={ cssMainClasses }>

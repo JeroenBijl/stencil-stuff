@@ -17,7 +17,7 @@
 
   &__field {
     border-radius: $border-radius;
-    border: 2px solid #979797;
+    border: 2px solid $light-grey;
     font-size: 20px;
     width: 350px;
     height: 30px;
@@ -41,7 +41,6 @@
       display: block;
       font-style: italic;
       height: auto;
-      padding: 5px 5px 0 5px;
       width: 350px;
     }
 
