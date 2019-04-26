@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+
+.cw-card {
+  align-items: center;
+  align-content: center;
+  border-radius: 20px;
+  background-color: $dark-grey;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  transition: ease-in;
+  padding: 40px 0 40px;
+  width: 500px;
+}

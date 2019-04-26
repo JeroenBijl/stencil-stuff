@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.cw-button {
+  background-color: $orange;
+  border: 1px transparent;
+  border-radius: $border-radius;
+  color: $white;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+
+  &:focus:not(.cw-button--disabled) {
+    border: 2px solid darken($orange, 10);
+    outline: 0;
+  }
+
+  &:active:not(.cw-button--disabled) {
+    border: 2px solid darken($orange, 10);
+  }
+
+  &:hover:not(.cw-button--disabled) {
+    background-color: darken($orange, 10);
+  }
+
+  &--disabled {
+    background-color: $light-grey;
+    color: $dark-grey;
+  }
+}
+
