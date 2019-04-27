@@ -44,7 +44,6 @@ export namespace Components {
   }
 
   interface CwTextInput {
-    'catType': string;
     'color': 'pink' | 'blue' | 'purple';
     'disabled': boolean;
     'id': string;
@@ -61,7 +60,6 @@ export namespace Components {
     'value': string;
   }
   interface CwTextInputAttributes extends StencilHTMLAttributes {
-    'catType'?: string;
     'color'?: 'pink' | 'blue' | 'purple';
     'disabled'?: boolean;
     'id'?: string;
