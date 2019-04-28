@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <script src="/dist/cw-components.js"></script>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+</style>
+<body>
+<div>
+  <p>Button with submit</p>
+  <cw-button id="cw-button-submit" type="submit"></cw-button>
+</div>
+<div>
+  <p>Button with reset</p>
+  <cw-button id="cw-button-reset" type="button"></cw-button>
+</div>
+<div>
+  <p>Button with reset</p>
+  <cw-button id="cw-button-button" type="reset"></cw-button>
+</div>
+
+<script>
+  const submit = document.getElementById('cw-button-submit');
+  const reset = document.getElementById('cw-button-reset');
+  const button = document.getElementById('cw-button-button');
+
+  submit.addEventListener('cwSubmit', () => {
+    alert('on submit');
+  });
+
+  reset.addEventListener('cwReset', () => {
+    alert('on reset');
+  });
+
+  button.addEventListener('onClick', () => {
+    alert('on click');
+  });
+</script>
+</body>
+</html>

@@ -12,7 +12,6 @@ export class CwTextInput implements ICwInputElement {
 
   @Element() private element: HTMLElement;
 
-  @Prop() protected color: 'pink' | 'blue' | 'purple' = 'blue';
   @Prop() public disabled: boolean = false;
   @Prop() public id: string = '';
   @Prop() protected name: string = '';

@@ -11,20 +11,23 @@ export class CwButton {
   @Prop() protected type: 'submit' | 'button' | 'reset' = 'button';
   @Prop() protected disabled: boolean = false;
 
-  @Event() protected onCwSubmit: EventEmitter;
-  @Event() protected onCwReset: EventEmitter;
+  @Event() protected cwSubmit: EventEmitter;
+  @Event() protected cwReset: EventEmitter;
+  @Event() protected cwClick: EventEmitter;
+
 
   protected onClick(): void {
     if (this.disabled) {
       return;
     }
     if (this.type === 'submit') {
-      this.onCwSubmit.emit();
+      this.cwSubmit.emit();
     } else if (this.type === 'reset') {
-      this.onCwReset.emit();
+      this.cwReset.emit();
+    } else if (this.type === 'button') {
+      this.cwClick.emit();
     }
   }
-
 
   protected render(): JSX.Element {
     const cssClasses = `cw-button ${ this.disabled ? 'cw-button--disabled' : '' }`;
