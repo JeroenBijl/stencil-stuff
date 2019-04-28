@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Stencil Component Starter</title>
-  <script src="/build/cw-components.js"></script>
+  <script src="/dist/cw-components.js"></script>
 </head>
 <style>
   @import url('https://fonts.googleapis.com/css?family=Open+Sans');
@@ -37,10 +37,10 @@
 <div class="login-content">
   <cw-card>
     <h1 slot="header">Login</h1>
-    <cw-form action="#" id="cw-form" slot="content">
+    <cw-form action="#" id="cw-form" slot="content" style="width: 350px">
       <cw-text-input class="spacing-input-field" id="email" name="email" type="email" placeholder="email" required></cw-text-input>
       <cw-text-input class="spacing-input-field" id="password" name="password" placeholder="password" type="password" required></cw-text-input>
-      <cw-button spacing-input-field type="submit"></cw-button>
+      <cw-button class="spacing-input-field" type="submit"></cw-button>
     </cw-form>
   </cw-card>
 </div>

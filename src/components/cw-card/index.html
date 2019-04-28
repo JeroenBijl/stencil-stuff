@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <script src="/dist/cw-components.js"></script>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  h1 {
+    color: #FD5817;
+    font-size: 42px;
+    margin: 5px;
+    padding: 0;
+  }
+</style>
+<body>
+<cw-card>
+  <h1 slot="header">Login</h1>
+  <span slot="content">Some text within the card</span>
+</cw-card>
+
+<script>
+  const form = document.getElementById('cw-form');
+
+  form.addEventListener('cwFormSubmit', () => {
+    alert('ready to submit');
+  });
+</script>
+</body>
+</html>

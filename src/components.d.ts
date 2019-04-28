@@ -20,17 +20,14 @@ export namespace Components {
   interface CwButtonAttributes extends StencilHTMLAttributes {
     'buttonText'?: string;
     'disabled'?: boolean;
-    'onOnCwReset'?: (event: CustomEvent) => void;
-    'onOnCwSubmit'?: (event: CustomEvent) => void;
+    'onCwClick'?: (event: CustomEvent) => void;
+    'onCwReset'?: (event: CustomEvent) => void;
+    'onCwSubmit'?: (event: CustomEvent) => void;
     'type'?: 'submit' | 'button' | 'reset';
   }
 
-  interface CwCard {
-    'complete': boolean;
-  }
-  interface CwCardAttributes extends StencilHTMLAttributes {
-    'complete'?: boolean;
-  }
+  interface CwCard {}
+  interface CwCardAttributes extends StencilHTMLAttributes {}
 
   interface CwForm {
     'action': string;
@@ -44,7 +41,6 @@ export namespace Components {
   }
 
   interface CwTextInput {
-    'color': 'pink' | 'blue' | 'purple';
     'disabled': boolean;
     'id': string;
     'maxlength': number;
@@ -60,7 +56,6 @@ export namespace Components {
     'value': string;
   }
   interface CwTextInputAttributes extends StencilHTMLAttributes {
-    'color'?: 'pink' | 'blue' | 'purple';
     'disabled'?: boolean;
     'id'?: string;
     'maxlength'?: number;

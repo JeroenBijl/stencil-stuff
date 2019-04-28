@@ -56,13 +56,13 @@ export class Rfs2Form {
     }
   }
 
-  @Listen('onCwReset')
+  @Listen('cwReset')
   protected onResetHandler(event: Event): void {
     event.preventDefault();
     this.reset();
   }
 
-  @Listen('onCwSubmit')
+  @Listen('cwSubmit')
   protected onSubmitHandler(event: Event): boolean {
     if (this.isSubmitted) {
       event.preventDefault();

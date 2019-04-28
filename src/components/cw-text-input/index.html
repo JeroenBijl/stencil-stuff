@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <script src="/dist/cw-components.js"></script>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .input-wrapper {
+    width: 350px;
+  }
+</style>
+<body>
+<div class="input-wrapper">
+  <p>Input which is required and has a type with email, put in a wrapper with a width of 350px</p>
+  <cw-text-input class="spacing-input-field" id="email" name="email" type="email" placeholder="email"
+    required></cw-text-input>
+</div>
+<div>
+  <p>Input which is required and has a type with password</p>
+
+  <cw-text-input class="input-field-password" id="password" name="password" type="password" placeholder="password" required></cw-text-input>
+</div>
+<div>
+  <p>Input which is not required and has a pattern with [0-9*]</p>
+  <cw-text-input class="input-field-pattern" id="numbers-pattern" name="numbers-pattern" type="numbers" placeholder="numbers" pattern="[0-9]*"></cw-text-input>
+</div>
+<div>
+  <p>Input which is disabled>
+  <cw-text-input class="input-field-disabled" id="numbers-pattern" name="numbers-pattern" type="numbers" placeholder="numbers" disabled></cw-text-input>
+</div>
+</body>
+</html>

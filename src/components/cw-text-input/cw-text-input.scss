@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-items: center;
+  width: 100%;
 
   &--error {
     background-color: $error-light;
@@ -17,23 +18,29 @@
 
   &__field {
     border-radius: $border-radius;
-    border: 2px solid $light-grey;
+    border: 2px solid $grey;
     font-size: 20px;
-    width: 350px;
+    width: inherit;
     height: 30px;
-    padding: 0 4px 0 4px;
 
     &::placeholder {
       color: $light-grey;
     }
 
     &:active {
+      border: 2px solid $orange;
       outline: 0;
     }
 
     &:focus {
-      border: 2px solid;
+      border: 2px solid $orange;
       outline: 0;
+    }
+
+    &:disabled {
+      background-color: $lightest-grey;
+      border: 2px solid $light-grey;
+      color: $light-grey
     }
 
     &__error-message {
@@ -41,11 +48,8 @@
       display: block;
       font-style: italic;
       height: auto;
-      width: 350px;
-    }
-
-    &:focus, &:active {
-      border-color: $light-grey;
+      text-align: center;
+      width: inherit;
     }
   }
 }
