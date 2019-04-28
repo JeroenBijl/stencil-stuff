@@ -25,12 +25,8 @@ export namespace Components {
     'type'?: 'submit' | 'button' | 'reset';
   }
 
-  interface CwCard {
-    'complete': boolean;
-  }
-  interface CwCardAttributes extends StencilHTMLAttributes {
-    'complete'?: boolean;
-  }
+  interface CwCard {}
+  interface CwCardAttributes extends StencilHTMLAttributes {}
 
   interface CwForm {
     'action': string;

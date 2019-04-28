@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component } from '@stencil/core';
 
 @Component({
   tag: 'cw-card',
@@ -7,17 +7,8 @@ import { Component, Prop } from '@stencil/core';
 })
 export class CwCard {
 
-  @Prop() complete: boolean = false;
-
-  protected componentDidLoad() {
-  }
-
   render() {
-    const cssClasses = `cw-card`;
-
-    return <div class={ cssClasses }>
-      <slot name="header" />
-      <slot name="content" />
+    return <div class='cw-card'>
     </div>;
   }
 }
