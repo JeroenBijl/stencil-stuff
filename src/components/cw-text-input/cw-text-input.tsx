@@ -14,13 +14,16 @@ export class CwTextInput implements ICwInputElement {
 
   @Prop() public disabled: boolean = false;
   @Prop() public id: string = '';
-  @Prop() protected name: string = '';
-  @Prop() protected maxlength: number = 500;
-  @Prop() protected pattern: string;
+  @Prop() public name: string = '';
+  @Prop() public max: number;
+  @Prop() public maxlength: number = 500;
+  @Prop() public min: number;
+  @Prop() public minlength: number = 0;
+  @Prop() public pattern: string;
   @Prop() public placeholder: string;
-  @Prop() protected readonly: boolean = false;
+  @Prop() public readonly: boolean = false;
   @Prop() public required: boolean = false;
-  @Prop() private type: string = 'text';
+  @Prop() public type: string = 'text';
   @Prop({ mutable: true }) public value: string;
 
   @Event() private inputStateChanged: EventEmitter;
@@ -80,7 +83,10 @@ export class CwTextInput implements ICwInputElement {
       disabled: this.disabled,
       id: this.id,
       name: this.name,
+      max: this.max,
       maxLength: this.maxlength,
+      min: this.min,
+      minLength: this.minlength,
       pattern: this.pattern,
       placeholder: this.placeholder,
       readonly: this.readonly,

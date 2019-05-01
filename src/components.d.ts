@@ -43,7 +43,10 @@ export namespace Components {
   interface CwTextInput {
     'disabled': boolean;
     'id': string;
+    'max': number;
     'maxlength': number;
+    'min': number;
+    'minlength': number;
     'name': string;
     'pattern': string;
     'placeholder': string;
@@ -58,7 +61,10 @@ export namespace Components {
   interface CwTextInputAttributes extends StencilHTMLAttributes {
     'disabled'?: boolean;
     'id'?: string;
+    'max'?: number;
     'maxlength'?: number;
+    'min'?: number;
+    'minlength'?: number;
     'name'?: string;
     'onCwBlur'?: (event: CustomEvent) => void;
     'onCwChange'?: (event: CustomEvent) => void;
