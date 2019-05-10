@@ -7,7 +7,6 @@ import { Component } from '@stencil/core';
 })
 export class CwCard {
 
-
   render() {
     return <div class='cw-card'>
     </div>;
