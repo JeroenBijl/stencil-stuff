@@ -20,8 +20,9 @@
     border-radius: $border-radius;
     border: 2px solid $grey;
     font-size: 20px;
-    width: inherit;
     height: 30px;
+    padding: 0 5px 0 5px;
+    width: inherit;
 
     &::placeholder {
       color: $light-grey;
