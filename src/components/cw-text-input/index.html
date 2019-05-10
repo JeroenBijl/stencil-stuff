@@ -21,8 +21,8 @@
 <body>
 <div class="input-wrapper">
   <p>Input which is required and has a type with email, put in a wrapper with a width of 350px</p>
-  <cw-text-input class="spacing-input-field" id="email" name="email" type="email" placeholder="email"
-    required></cw-text-input>
+  <cw-text-input id="text-input-email" class="spacing-input-field" id="email" name="email" type="email" placeholder="email"
+    required value=""></cw-text-input>
 </div>
 <div>
   <p>Input which is required and has a type with password</p>
@@ -37,5 +37,26 @@
   <p>Input which is disabled>
   <cw-text-input class="input-field-disabled" id="numbers-pattern" name="numbers-pattern" type="numbers" placeholder="numbers" disabled></cw-text-input>
 </div>
+<script>
+  const inputEmail = document.getElementById('text-input-email');
+
+  inputEmail.addEventListener('cwChange', () => {
+    console.log('on change');
+  });
+
+  inputEmail.addEventListener('cwInput', () => {
+    console.log('on input');
+    console.log('value is ', inputEmail.value);
+  });
+
+  inputEmail.addEventListener('cwBlur', () => {
+    console.log('on blur');
+  });
+
+  inputEmail.addEventListener('cwFocus', () => {
+    console.log('on focus');
+  });
+
+</script>
 </body>
 </html>

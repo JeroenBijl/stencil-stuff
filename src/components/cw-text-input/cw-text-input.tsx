@@ -24,7 +24,7 @@ export class CwTextInput implements ICwInputElement {
   @Prop() public readonly: boolean = false;
   @Prop() public required: boolean = false;
   @Prop() public type: string = 'text';
-  @Prop({ mutable: true }) public value: string;
+  @Prop({ mutable: true }) public value: string = '';
 
   @Event() private inputStateChanged: EventEmitter;
   @Event() private cwChange: EventEmitter;
@@ -95,12 +95,11 @@ export class CwTextInput implements ICwInputElement {
       value: this.value
     };
 
-    const cssInputClasses = `cw-text-input__field`;
     const cssMainClasses = `cw-text-input ${ this.error ? 'cw-text-input--error' : '' }`;
 
     return <div class={ cssMainClasses }>
       <input ref={ (element) => this.inputText = element }
-        class={ cssInputClasses }
+        class='cw-text-input__field'
         { ...attributes }
         onBlur={ () => this.onBlur() }
         onChange={ () => this.onChange() }
